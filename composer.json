@@ -1,5 +1,8 @@
 {
   "name": "rstgroup/conference-system",
+  "require": {
+    "litipk/php-bignumbers": "0.7.3"
+  },
   "require-dev": {
     "phpunit/phpunit": "^4.8",
     "symfony/http-foundation": "^3.1"
