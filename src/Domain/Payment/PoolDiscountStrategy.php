@@ -24,5 +24,6 @@ class PoolDiscountStrategy implements SeatDiscountStrategy
      */
     public function calculate(Seat $seat)
     {
+        return 0;
     }
 }
