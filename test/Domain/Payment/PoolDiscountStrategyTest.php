@@ -31,4 +31,11 @@ class PoolDiscountStrategyTest extends \PHPUnit_Framework_TestCase
     public function returns_discount_per_seat_multiplied_by_number_of_seats_when_there_are_enough_discounts()
     {
     }
+
+    /**
+     * @test
+     */
+    public function returns_discount_per_seat_multiplied_by_number_of_seats_when_there_are_enough_discounts()
+    {
+    }
 }
