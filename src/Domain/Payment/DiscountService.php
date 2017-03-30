@@ -27,9 +27,6 @@ class DiscountService
 
     protected function seatDiscountStrategies()
     {
-       return [
-           new AtLeastTenEarlyBirdSeatsDiscountStrategy($this->configuration),
-           new FreeSeatDiscountStrategy($this->configuration),
-       ];
+       return [];
     }
 }
