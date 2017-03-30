@@ -3,6 +3,7 @@
 namespace RstGroup\ConferenceSystem\Domain\Payment;
 
 
+use Litipk\BigNumbers\Decimal;
 use RstGroup\ConferenceSystem\Domain\Reservation\ConferenceId;
 use RstGroup\ConferenceSystem\Domain\Reservation\Seat;
 
