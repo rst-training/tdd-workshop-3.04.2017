@@ -10,13 +10,16 @@ use RstGroup\ConferenceSystem\Domain\Reservation\Seat;
 class PoolDiscountStrategy implements SeatDiscountStrategy
 {
     private $conferenceId;
+    private $discountPoolRepository;
 
     /**
      * @param ConferenceId $conferenceId
+     * @param DiscountPoolRepository $discountPoolRepository
      */
-    public function __construct(ConferenceId $conferenceId)
+    public function __construct(ConferenceId $conferenceId, DiscountPoolRepository $discountPoolRepository)
     {
         $this->conferenceId = $conferenceId;
+        $this->discountPoolRepository = $discountPoolRepository;
     }
 
     /**
