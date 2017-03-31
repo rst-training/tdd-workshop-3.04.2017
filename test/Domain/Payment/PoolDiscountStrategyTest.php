@@ -20,12 +20,7 @@ class PoolDiscountStrategyTest extends \PHPUnit_Framework_TestCase
         $conferenceId = new ConferenceId(7);
         $discountPoolRepository = $this->getMock(DiscountPoolRepository::class);
         $discountPoolRepository->method('getNumberOfDiscounts')->willReturn(0);
-        $discountPoolRepository->method('getDiscountPerSeat')->willReturn(
-            new Money(
-                Decimal::fromInteger(13),
-                new Currency("PLN")
-            )
-        );
+        $discountPoolRepository->method('getDiscountPerSeat')->willReturn(13);
         $poolDiscountStrategy = new PoolDiscountStrategy($conferenceId, $discountPoolRepository);
         $seat = new Seat("Regular", $seatQuantity);
 
@@ -40,15 +35,10 @@ class PoolDiscountStrategyTest extends \PHPUnit_Framework_TestCase
     public function returns_discount_per_seat_multiplied_by_number_of_seats_when_there_are_enough_discounts()
     {
         $conferenceId = new ConferenceId(3);
-        $numberOfSeats = 7;
+        $numberOfSeats = 100;
         $discountPoolRepository = $this->getMock(DiscountPoolRepository::class);
         $discountPoolRepository->method('getNumberOfDiscounts')->willReturn($numberOfSeats);
-        $discountPoolRepository->method('getDiscountPerSeat')->willReturn(
-            new Money(
-                Decimal::fromInteger(12),
-                new Currency("PLN")
-            )
-        );
+        $discountPoolRepository->method('getDiscountPerSeat')->willReturn(50);
         $poolDiscountStrategy = new PoolDiscountStrategy($conferenceId, $discountPoolRepository);
         $seat = new Seat("Regular", $numberOfSeats);
 
