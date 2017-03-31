@@ -15,14 +15,13 @@ class PoolDiscountStrategyTest extends \PHPUnit_Framework_TestCase
      */
     public function returns_discount_equal_to_zero_if_discount_pool_is_empty()
     {
-        $seatQuantity = 50;
+        $seatQuantity = 34;
         $conferenceId = new ConferenceId(7);
         $poolDiscountStrategy = new PoolDiscountStrategy($conferenceId);
         $seat = new Seat("Regular", $seatQuantity);
 
         $discount = $poolDiscountStrategy->calculate($seat);
 
-        $expectedDiscount = 0;
-        $this->assertSame($expectedDiscount, $discount);
+        $this->assertSame(0, $discount);
     }
 }
