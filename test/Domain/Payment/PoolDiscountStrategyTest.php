@@ -2,9 +2,7 @@
 
 namespace RstGroup\ConferenceSystem\Domain\Payment\Test;
 
-use RstGroup\ConferenceSystem\Domain\Payment\Currency;
 use RstGroup\ConferenceSystem\Domain\Payment\DiscountPoolRepository;
-use RstGroup\ConferenceSystem\Domain\Payment\Money;
 use RstGroup\ConferenceSystem\Domain\Payment\PoolDiscountStrategy;
 use RstGroup\ConferenceSystem\Domain\Reservation\ConferenceId;
 use RstGroup\ConferenceSystem\Domain\Reservation\Seat;
