@@ -9,5 +9,6 @@ class PoolDiscountStrategyTest extends \PHPUnit_Framework_TestCase
      */
     public function returns_discount_equal_to_zero_if_discount_pool_is_empty()
     {
+        $this->fail();
     }
 }
